@@ -71,18 +71,24 @@ export default function Home() {
           </span>
         </Link>
 
-        {/* Movies (placeholder) */}
-        <div className="block w-80 bg-white/5 backdrop-blur rounded-2xl border-2 border-white/10 p-6 opacity-60 cursor-not-allowed">
+        {/* Películas — Híbrido (SSR + CSR) */}
+        <Link
+          href="/peliculas"
+          className="group block w-80 bg-white/10 backdrop-blur rounded-2xl border-2 border-yellow-400/30 p-6 hover:border-yellow-400 hover:bg-white/15 transition-all"
+        >
           <div className="text-4xl mb-3">🎬</div>
-          <h2 className="text-xl font-bold text-white mb-2">Películas — OMDb</h2>
+          <h2 className="text-xl font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
+            Películas — Híbrido
+          </h2>
           <p className="text-zinc-400 text-sm leading-relaxed">
-            Galería de películas con búsqueda CSR + detalle desde OMDb API.
-            Próximamente.
+            Galería de películas con SSR inicial + búsqueda CSR interactiva desde la API de{" "}
+            <code className="text-yellow-300">OMDb</code>. Incluye modal con
+            detalles completos.
           </p>
-          <span className="inline-block mt-3 text-zinc-500 text-sm font-semibold">
-            Próximo →
+          <span className="inline-block mt-3 text-yellow-300 text-sm font-semibold group-hover:translate-x-1 transition-transform">
+            Ver ejercicio →
           </span>
-        </div>
+        </Link>
       </div>
     </div>
   );
