@@ -50,18 +50,26 @@ export default function Home() {
           </span>
         </Link>
 
-        {/* Weather (placeholder) */}
-        <div className="block w-80 bg-white/5 backdrop-blur rounded-2xl border-2 border-white/10 p-6 opacity-60 cursor-not-allowed">
+        {/* Weather Dashboard (Hybrid SSR + CSR) */}
+        <Link
+          href="/weather"
+          className="group block w-80 bg-white/10 backdrop-blur rounded-2xl border-2 border-sky-400/30 p-6 hover:border-sky-400 hover:bg-white/15 transition-all"
+        >
           <div className="text-4xl mb-3">🌤️</div>
-          <h2 className="text-xl font-bold text-white mb-2">Clima — SSR</h2>
+          <h2 className="text-xl font-bold text-white mb-2 group-hover:text-sky-300 transition-colors">
+            Clima — Híbrido
+          </h2>
           <p className="text-zinc-400 text-sm leading-relaxed">
-            Dashboard del clima con datos SSR + widget CSR interactivo para
-            cambiar de ciudad. Próximamente.
+            Dashboard con Lima SSR + widget CSR para{" "}
+            <code className="text-sky-300">Tokyo</code>,{" "}
+            <code className="text-sky-300">New York</code>,{" "}
+            <code className="text-sky-300">London</code> y{" "}
+            <code className="text-sky-300">Sydney</code>.
           </p>
-          <span className="inline-block mt-3 text-zinc-500 text-sm font-semibold">
-            Próximo →
+          <span className="inline-block mt-3 text-sky-300 text-sm font-semibold group-hover:translate-x-1 transition-transform">
+            Ver ejercicio →
           </span>
-        </div>
+        </Link>
 
         {/* Movies (placeholder) */}
         <div className="block w-80 bg-white/5 backdrop-blur rounded-2xl border-2 border-white/10 p-6 opacity-60 cursor-not-allowed">
