@@ -4,7 +4,9 @@ import type { OMDbSearchResponse, MovieDetail } from "@/types/movie";
 const OMDB_BASE_URL = "https://www.omdbapi.com";
 
 function getApiKey(): string {
-  const key = process.env.OMDB_API_KEY;
+  // Works in both server and client contexts.
+  // Server Components read OMDB_API_KEY; Client Components read NEXT_PUBLIC_OMDB_API_KEY.
+  const key = process.env.NEXT_PUBLIC_OMDB_API_KEY || process.env.OMDB_API_KEY;
   if (!key) {
     throw new Error("OMDB_API_KEY is not configured in environment");
   }
